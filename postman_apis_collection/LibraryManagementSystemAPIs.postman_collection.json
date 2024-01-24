@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "fe3df78d-0a9c-4afa-be72-f20d16014d93",
+		"name": "LibraryManagementSystemAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32514057"
+	},
+	"item": [
+		{
+			"name": "Book endpoints",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_any_user_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/books"
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new\",\r\n    \"author\" : \"new\",\r\n    \"publicationYear\" : 2010,\r\n    \"isbn\" : \"asdasd \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/books"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/books/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"new2\",\r\n    \"author\" : \"nedsaw\",\r\n    \"publicationYear\" : 2010,\r\n    \"isbn\" : \"asdasd \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/books/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/books/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Currently Borrowed Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records/currently-borrowed"
+					},
+					"response": []
+				},
+				{
+					"name": "Currently Borrowed Books Count by Patron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records/patron/1/currently-borrowed-count"
+					},
+					"response": []
+				},
+				{
+					"name": "Get returned Books by Patron for last number of days",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records/patron/1/returned-last-period/100"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patron endpoints",
+			"item": [
+				{
+					"name": "Get All Patrons",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/patrons"
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Patron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"new\",\r\n    \"contactInformation\" : \"new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/patrons"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patron by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/patrons/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"newasd\",\r\n    \"contactInformation\" : \"asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/patrons/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patron by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/patrons/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrowing Record endpoints",
+			"item": [
+				{
+					"name": "Borrow Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/api/borrow/3/patron/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Return Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/api/return/3/patron/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Borrowing Records",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Borrowing Records for Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records/book/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Borrowing Records by Patron",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "add_admin_token_here"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/borrowing-records/patron/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth endpoint",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
