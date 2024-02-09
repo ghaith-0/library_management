@@ -1,7 +1,4 @@
-# Optional Back-End Assignment
-
 Mhd Ghaith Al Abtah (ghaith.dev.0@gmail.com)
-Maids.cc Software Developer - Back-End
 ## Steps to run:
 - Create a database named 'library'.
 
